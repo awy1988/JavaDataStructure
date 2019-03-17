@@ -46,5 +46,32 @@ public class InsertSort {
         System.out.println("插入排序的比较次数是：" + count);
     }
 
+    /**
+     * 插入排序算法的另一种实现
+     */
+    public static void sort2(int[] arrayToBeSorted) {
+        int count = 0;
+
+        int temp;
+        for (int i = 1; i < arrayToBeSorted.length; i++) {
+            temp = arrayToBeSorted[i];
+            int j = i - 1;
+            for ( ;j >=0;j-- ) {
+                if (arrayToBeSorted[j] <= temp) {
+                    break;
+                }
+                arrayToBeSorted[j+1] = arrayToBeSorted[j];
+            }
+            // j的值为我们要插入位置的前一个位置的下标，
+            // 为什么呢？
+            // 因为：我们循环的逻辑是从j的位置上开始遍历，如果数组在j的这个位置上的值小于等于比较的值，那么就跳出循环
+            // 这时我们就找到了第一个不大于本轮比较元素的值的位置，也就是我们要找的位置往前1位的位置，所以j+1就是我们
+            // 的元素要插入的位置。
+            arrayToBeSorted[j+1] = temp;
+        }
+
+        System.out.println("插入排序的比较次数是：" + count);
+    }
+
 
 }

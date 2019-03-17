@@ -6,8 +6,8 @@ public class SortDisplay {
         System.out.println("程序测试开始");
 //        testBubble();
 //        testSelectionSort();
-        testInsertSort();
-
+//        testInsertSort();
+        testInsertSort2();
     }
 
     private static void testBubble() {
@@ -26,5 +26,10 @@ public class SortDisplay {
     private static void testInsertSort() {
         TestCase testCase = new TestCase();
         testCase.testInsertSort();
+    }
+
+    private static void testInsertSort2() {
+        TestCase testCase = new TestCase();
+        testCase.testInsertSort2();
     }
 }
