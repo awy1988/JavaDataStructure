@@ -3,15 +3,28 @@ package sort;
 public class SortDisplay {
 
     public static void main(String[] args) {
+        System.out.println("程序测试开始");
 //        testBubble();
+//        testSelectionSort();
+        testInsertSort();
+
     }
 
     private static void testBubble() {
-        System.out.println("程序测试开始");
+
         TestCase testCase = new TestCase();
         testCase.testBubbleSort();
         System.out.println();
         testCase.testImprovedBubbleSort();
     }
 
+    private static void testSelectionSort() {
+        TestCase testCase = new TestCase();
+        testCase.testSelectionSort();
+    }
+
+    private static void testInsertSort() {
+        TestCase testCase = new TestCase();
+        testCase.testInsertSort();
+    }
 }

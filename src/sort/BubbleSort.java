@@ -26,7 +26,7 @@ public class BubbleSort {
             for (int i = 0; i < arrayToBeSorted.length - 1; i++) {
                 // 循环到length - 1 以防止数组越界
                 if (arrayToBeSorted[i] > arrayToBeSorted[i+1]) {
-                    swap(arrayToBeSorted, i);
+                    SortHelper.swap(arrayToBeSorted, i, i+1);
                 }
                 count++;
             }
@@ -54,7 +54,7 @@ public class BubbleSort {
                  i < arrayToBeSorted.length - 1 - j; // 这里 -j 减少冒泡的次数
                  i++) {
                 if (arrayToBeSorted[i] > arrayToBeSorted[i+1]) {
-                    swap(arrayToBeSorted, i);
+                    SortHelper.swap(arrayToBeSorted, i, i+1);
                     // 一旦发生元素交换，认为数组并没有完全有序
                     isArraySorted = false;
                 }
@@ -73,11 +73,11 @@ public class BubbleSort {
 
     }
 
-    private static void swap(int[] a, int index) {
-        int temp;
-        temp = a[index];
-        a[index] = a[index + 1];
-        a[index + 1] = temp;
-    }
+//    private static void swap(int[] a, int index) {
+//        int temp;
+//        temp = a[index];
+//        a[index] = a[index + 1];
+//        a[index + 1] = temp;
+//    }
 
 }
